@@ -1,0 +1,46 @@
+.container {
+  background-color: rgba(155, 196, 8, 0.1);
+  width: 100%;
+}
+
+@media screen and (max-width:1440px){
+  .container{ 
+    width: 1900px;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .container {
+    width: 1274px;
+
+  }
+}
+
+@media screen and (max-width:768px) {
+  .container {
+    width: 1274px;
+  }
+}
+
+@media screen and (max-width:425px) {
+  .container {
+    width: 1180px;
+  }
+}
+
+@media screen and (max-width:375px) {
+  .container {
+    width: 1040px;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .container {
+    width: 880px;
+  }
+}
+
+
+
+
+

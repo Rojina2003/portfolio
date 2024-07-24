@@ -1,0 +1,86 @@
+.warpDiv2 {
+  background-color: rgba(155, 196, 8, 0.1);
+  background-image: radial-gradient(rgb(229 244 174) 1%, rgb(245 249 230) 40%);
+  height: 50vh;
+  margin-top: 70px;
+}
+
+.Text {
+  height: 63px;
+  margin-left: 605px;
+  font-family:"Poppins";
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 63px;
+  letter-spacing: -0.05em;
+  margin-bottom: 80px;
+}
+.span {
+  color: rgba(129, 172, 64, 1);
+  margin-left: 10px;
+}
+
+.div2AllButton {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+.div2AllButton2 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin-top: 10px;
+}
+.div2Button {
+  border: none;
+  height: 50px;
+  width: 250px;
+  align-content: center;
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  font-family: "Poppins";
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: -0.05em;
+}
+
+.PageScroll {
+  width: 768px;
+  height: 45px;
+  margin-left: 600px;
+  font-family: "Poppins";
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 45px;
+  letter-spacing: -0.05em;
+  color: black;
+  margin-top: 80px;
+}
+@media screen and (max-width:1440px){
+    
+}
+
+@media screen and (max-width:1024px) {
+  
+}
+
+@media screen and (max-width:768px) {
+  
+}
+
+@media screen and (max-width:425px) {
+  
+}
+
+@media screen and (max-width:375px) {
+  
+}
+
+@media screen and (max-width:320px) {
+  
+}
