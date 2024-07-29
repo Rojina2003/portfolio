@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import style from "../css/website.module.css";
 
-// Image data mapping each button name to an object containing images, heading, and description
 const imageData = {
   Nocoin: {
     heading: "Crypto",
@@ -90,9 +89,18 @@ const imageData = {
 };
 
 const Website = () => {
-  const [selectedButton, setSelectedButton] = useState(
-    Object.keys(imageData)[0]
-  );
+  const [selectedButton, setSelectedButton] = useState(Object.keys(imageData)[0]);
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownVisible(!dropdownVisible);
+  };
+
+  const handleDropdownChange = (e) => {
+    setSelectedButton(e.target.value);
+    setDropdownVisible(false); // Hide dropdown after selection
+  };
+
 
   return (
     <>
@@ -104,12 +112,30 @@ const Website = () => {
             {Object.keys(imageData).map((buttonName) => (
               <button
                 key={buttonName}
-                className={`${style.mobWebButton} ${selectedButton === buttonName ? style.active : ''}`}
+                className={`${style.mobWebButton} ${
+                  selectedButton === buttonName ? style.active : ""
+                }`}
                 onClick={() => setSelectedButton(buttonName)}
               >
                 {buttonName}
               </button>
             ))}
+          </div>
+          <div className={style.dropdownContainer}>
+            <button onClick={toggleDropdown} className={style.mobWebButton}>
+              {selectedButton} {dropdownVisible ? "▲" : "▼"}
+            </button>
+            <select
+              className={`${style.dropdown} ${dropdownVisible ? style.show : "" }`}
+              onChange={handleDropdownChange}
+              value={selectedButton}
+            >
+              {Object.keys(imageData).map((buttonName) => (
+                <option key={buttonName} value={buttonName}>
+                  {buttonName} 
+                </option>
+              ))}
+            </select>
           </div>
           <div className={style.imageDisplay}>
             {selectedButton && (

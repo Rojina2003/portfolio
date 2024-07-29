@@ -3,7 +3,9 @@ import style from "../css/mobile.module.css";
 
 const Mobile = () => {
   const [selectedButton, setSelectedButton] = useState("");
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const containerRef = useRef(null);
+  const dropdownRef = useRef(null);
 
   const images = {
     Puntsquad: {
@@ -190,39 +192,78 @@ const Mobile = () => {
   useEffect(() => {
     const firstButton = Object.keys(images)[0];
     setSelectedButton(firstButton);
+
+    // click outside to close dropdown
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleButtonClick = (buttonName) => {
     setSelectedButton(buttonName);
-    if(containerRef.current){
-      containerRef.current.scrollTo({left:0,behavior: "smooth"});
+    setDropdownOpen(false);
+    if (containerRef.current) {
+      containerRef.current.scrollTo({ left: 0, behavior: "smooth" });
     }
   };
 
   const scroll = (direction) => {
     if (containerRef.current) {
-      const scrollAmount = direction === 'left' ? -containerRef.current.clientWidth : containerRef.current.clientWidth;
-      containerRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      const scrollAmount =
+        direction === "left"
+          ? -containerRef.current.clientWidth
+          : containerRef.current.clientWidth;
+      containerRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
 
   return (
     <div className={style.mobile}>
       <div className={style.mobHeadBack}>
-      <div className={style.moblieHead}>Mobile Designs</div>
+        <div className={style.moblieHead}>Mobile Designs</div>
       </div>
       <div className={style.mobileContainer}>
         <div className={style.mobWebButtonArea}>
           {Object.keys(images).map((buttonName) => (
             <button
               key={buttonName}
-              className={`${style.mobWebButton} ${selectedButton === buttonName ? style.active : ""}`}
+              className={`${style.mobWebButton} ${
+                selectedButton === buttonName ? style.active : ""
+              }`}
               onClick={() => handleButtonClick(buttonName)}
             >
               {buttonName}
             </button>
           ))}
+        </div>
+        <div className={style.dropdown} ref={dropdownRef}>
+          <button
+            className={style.dropdownButton}
+            onClick={() => setDropdownOpen(!dropdownOpen)}
+          >
+            {selectedButton || "Select an option"}
+            {"  "}
+          </button>
+          {dropdownOpen && (
+            <div className={style.dropdownContent}>
+              {Object.keys(images).map((buttonName) => (
+                <button
+                  key={buttonName}
+                  onClick={() => handleButtonClick(buttonName)}
+                >
+                  {buttonName}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
         {selectedButton && (
           <div className={style.selectedContent}>
@@ -231,7 +272,7 @@ const Mobile = () => {
                 {images[selectedButton].hedding}
               </div>
               <div className={style.description}>
-              {images[selectedButton].description}
+                {images[selectedButton].description}
               </div>
             </div>
             <div className={style.imageContainer} ref={containerRef}>
@@ -245,8 +286,18 @@ const Mobile = () => {
               ))}
             </div>
             <div className={style.paginationButton}>
-              <button className={style.prevButton} onClick={() => scroll('left')}>&#8592;</button>
-              <button className={style.nextButton} onClick={() => scroll('right')}>&#8594;</button>
+              <button
+                className={style.prevButton}
+                onClick={() => scroll("left")}
+              >
+                &#8592;
+              </button>
+              <button
+                className={style.nextButton}
+                onClick={() => scroll("right")}
+              >
+                &#8594;
+              </button>
             </div>
           </div>
         )}
@@ -256,4 +307,3 @@ const Mobile = () => {
 };
 
 export default Mobile;
-

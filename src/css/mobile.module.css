@@ -1,7 +1,6 @@
 .mobile {
   height: 100vh;
-  /* border: 1px solid black; */
-  background-image: linear-gradient( to top,#f5f9e6 10%, white 20%);
+  background-image: linear-gradient(to top, #f5f9e6 10%, white 20%);
 }
 
 .moblieHead {
@@ -16,12 +15,9 @@
   text-align: left;
   margin-bottom: 20px;
 }
-.mobHeadBack{
-  /* background-color: aliceblue; */
-  background-image: linear-gradient(#f5f9e6 14%, white );
+.mobHeadBack {
+  background-image: linear-gradient(#f5f9e6 14%, white);
   height: 100px;
-
-
 }
 
 .mobileContainer {
@@ -32,7 +28,6 @@
   background-color: rgba(255, 255, 255, 1);
   border-radius: 30px 30px 30px 30px;
   display: flex;
-  /* border: 2px solid darkgoldenrod; */
 }
 
 .mobWebButton {
@@ -64,34 +59,27 @@
   gap: 0px;
   border-radius: 30px 0px 0px 30px;
   opacity: 0px;
-  /* border: 2px solid yellow; */
-
 }
 
 .imageContainer {
   width: 1430px;
-    height: 620px;
-    /* margin-top: 60px; */
-    margin-left: 48px;
-    overflow-x: hidden;
-    white-space: nowrap;
-    scroll-behavior: smooth;
-    /* border: 1px solid rgb(4, 0, 255); */
+  height: 620px;
+  margin-left: 48px;
+  overflow-x: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
 }
 .displayedImage {
   margin-top: 15px;
   display: inline-block;
-  /* border: 2px solid brown; */
   height: 600px;
   padding-right: 90px;
   width: 300px;
 }
 .paginationButton {
   display: flex;
-  /* justify-content: end; */
   margin-top: 8px;
   margin-left: 1300px;
-  /* border: 2px solid black; */
 }
 
 .prevButton,
@@ -111,51 +99,376 @@
   background-color: black;
   color: white;
 }
-/* .descriptionArea {
-  width: 1300px;
-  height: 38px;
-  margin-bottom: 20px;
-  margin-left: 50px;
-  font-family: "Poppins";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 19.2px;
-  text-align: left;
-  margin-top: 10px;
 
-} */
-.description{
-  width: 1400px; 
-    height: 34px;
-    /* border: 2px solid violet; */
-    margin-left: 48px;
+.description {
+  width: 1400px;
+  height: 34px;
+  margin-left: 48px;
 }
 .hedding {
   font-family: "Poppins";
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 30px;
-    text-align: left;
-    margin-top: 21px;
-    margin-bottom: 10px;
-    /* border: 2px solid aqua; */
-    margin-left: 48px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  margin-top: 21px;
+  margin-bottom: 10px;
+  margin-left: 48px;
 }
 
-@media screen and (max-width: 1440px) {
+.dropdown {
+  display: none;
 }
 
-@media screen and (max-width: 1024px) {
+.dropdownButton {
+  width: 100%;
+    padding: 10px;
+    border-radius: 130px;
+    background-color: #baef02;
+    border: none;
+    font-size: 77px;
+    cursor: pointer;
+    height: 165px;
 }
 
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdownContent button {
+  padding: 15px;
+  text-decoration: none;
+  display: block;
+  border: none;
+  background: none;
+  text-align: left;
+  width: 90%;
+  margin-left: 10px;
+  border-radius: 45px;
+  height: 87px;
+  font-size: 54px;
+  margin-top: 20px;
+  color: white;
+}
+
+.dropdownContent button:hover {
+  border: none;
+  background-color: rgba(186, 239, 2, 1);
+  color: black;
+}
+@media screen and (max-width:1440px) {
+  .moblieHead{
+    margin-top: 115px;
+  }
+  
+}
 @media screen and (max-width: 768px) {
-}
+  .mobile {
+    /* border: 2px solid black; */
+        height: 214vh;
+        background-image: linear-gradient(to top, #f5f9e6 20%, white 20%, #f5f9e6);
+    }
+  .mobileContainer {
+    /* border: 2px solid blue; */
+    width: 1718px;
+    display: flex;
+    height: 1558px;
+    margin-top: 80px;
+  }
+  .moblieHead {
+    /* border: 2px solid red; */
+    width: 761px;
+    height: 95px;
+    font-size: 99px;
+    padding: 20px;
+    font-weight: 500;
+  }
+  .mobHeadBack{
+    background-color:  #f5f9e6;
+    background-image: none;
+  }
 
+  .imageContainer {
+    /* border: 2px solid brown; */
+        width: 1323px;
+        height: 1106px;
+        margin-top: 40px;
+        overflow: auto;
+    
+  }
+ .mobWebButtonArea{
+  width: 349px;
+        height: 1551px;
+        /* border: 4px solid #baef02; */
+ }
+ .mobWebButton{
+  font-size: 34px;
+        width: 318px;
+        height: 91px;
+        border-radius: 53px;
+    
+ }
+  .paginationButton {
+    /* border: 1px solid slateblue; */
+    height: 109px;
+    margin-top: 24px;
+    margin-left: 1090px;
+  }
+  .prevButton,
+  .nextButton {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    /* border: 3px solid black; */
+    font-size: 70px;
+  }
+  
+  .displayedImage {
+    width: 449px;
+        height: 999px;
+        margin-top: 24px;
+  }
+  .hedding {
+    /* border: 2px solid red; */
+    width: 700px;
+    height: 42px;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 27px;
+    margin-top: 32px;
+    padding: 20px;
+  }
+  .description {
+    /* border: 2px solid black; */
+        width: 1326px;
+        height: auto;
+        margin-top: 24px;
+        font-size: 34px;
+        font-weight: 500;
+        line-height: 44px;
+        text-align: left;
+  }
+}
+  
 @media screen and (max-width: 425px) {
+  .mobile {
+    /* border: 2px solid black; */
+        height: 310vh;
+        background-image: linear-gradient(to top, #f5f9e6 20%, white 20%, #f5f9e6);
+    }
+  .mobileContainer {
+    /* border: 2px solid blue; */
+    width: 1440px;
+    display: flex;
+    flex-direction: column;
+    height: 2307px;
+    margin-top: 102px;
+    margin-left: 135px;
+
+  }
+  .moblieHead {
+    /* border: 2px solid red; */
+    width: 761px;
+    height: 140px;
+    font-size: 99px;
+    padding: 20px;
+    font-weight: 500;
+    margin-top: 140px;
+
+  }
+  .mobHeadBack{
+    background-color:  #f5f9e6;
+    background-image: none;
+  }
+
+  .imageContainer {
+    /* border: 2px solid brown; */
+    width: 1398px;
+    height: 1520px;
+    margin-left: 25px;
+    border-radius: 20px 0px 0px 0px;
+    margin-top: 130px;
+    overflow: auto;
+  }
+  .mobWebButtonArea {
+    display: none;
+  }
+  .dropdown {
+    display: block;
+    /* background-color: aqua; */
+  }
+  .dropdownContent {
+    display: block;
+    background-color: black;
+    width: 1373px;
+    margin-left: 37px;
+    margin-top: 8px;
+    border-radius: 30px;
+  }
+  .paginationButton {
+    /* border: 1px solid slateblue; */
+    width: 270px;
+    height: 128px;
+    margin-top: 39px;
+    margin-left: 1116px;
+  }
+  .prevButton,
+  .nextButton {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    /* border: 3px solid black; */
+    font-size: 70px;
+  }
+  .displayedImage {
+    width: 856px;
+    height: 1506px;
+    margin-top: 10px;
+  }
+  .hedding {
+    /* border: 2px solid red; */
+    width: 700px;
+    height: 42px;
+    margin-left: 25px;
+    font-size: 62px;
+    font-weight: 700;
+    line-height: 27px;
+    margin-top: 32px;
+    padding: 20px;
+  }
+  .description {
+    /* order: 2px solid black; */
+    width: 1393px;
+    height: auto;
+    margin-top: 44px;
+    margin-left: 25px;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 57px;
+    text-align: left;
+  }
 }
 
-@media screen and (max-width: 375px) {
+
+@media screen and (max-width: 393px) {
+  .mobile {
+    /* border: 2px solid black; */
+        height: 310vh;
+        background-image: linear-gradient(to top, #f5f9e6 20%, white 20%, #f5f9e6);
+    }
+  .mobileContainer {
+    /* border: 2px solid blue; */
+    width: 1440px;
+    display: flex;
+    flex-direction: column;
+    height: 2307px;
+    margin: auto;
+        margin-top: 80px;
+    
+  }
+  .moblieHead {
+    /* border: 2px solid red; */
+    width: 761px;
+    height: 140px;
+    font-size: 99px;
+    padding: 20px;
+    font-weight: 500;
+    margin-left: 10px;
+  }
+  .mobHeadBack{
+    background-color:  #f5f9e6;
+    background-image: none;
+  }
+
+  .imageContainer {
+    /* border: 2px solid brown; */
+    width: 1398px;
+    height: 1520px;
+    margin-left: 25px;
+    border-radius: 20px 0px 0px 0px;
+    margin-top: 130px;
+  }
+  .mobWebButtonArea {
+    display: none;
+  }
+  .dropdown {
+    display: block;
+    /* background-color: aqua; */
+  }
+  .dropdownContent {
+    display: block;
+    background-color: black;
+    width: 1373px;
+    margin-left: 37px;
+    margin-top: 8px;
+    border-radius: 30px;
+  }
+  .paginationButton {
+    /* border: 1px solid slateblue; */
+    width: 270px;
+    height: 128px;
+    margin-top: 39px;
+    margin-left: 1116px;
+  }
+  .prevButton,
+  .nextButton {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    /* border: 3px solid black; */
+    font-size: 70px;
+  }
+  .displayedImage {
+    width: 856px;
+    height: 1506px;
+    margin-top: 10px;
+  }
+  .hedding {
+    /* border: 2px solid red; */
+    width: 700px;
+    height: 42px;
+    margin-left: 25px;
+    font-size: 62px;
+    font-weight: 700;
+    line-height: 27px;
+    margin-top: 32px;
+    padding: 20px;
+  }
+  .description {
+    /* order: 2px solid black; */
+    width: 1393px;
+    height: auto;
+    margin-top: 44px;
+    margin-left: 25px;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 57px;
+    text-align: left;
+  }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width:375px) {
+  .mobileContainer{
+    margin-left: 35px;
+    height: 2303px;
+    margin-top: 213px;
+    /* border: 3px solid blue; */
+  }
+  .hedding{
+    margin-left: 0px;
+    padding: 0px;
+    margin-top: 141px;
+  }
+  .description{
+    margin-left: 0px;
+  }
+  .mobile{
+    height: 407vh;
+  }
+
 }

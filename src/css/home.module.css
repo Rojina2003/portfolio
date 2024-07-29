@@ -24,7 +24,8 @@
   font-weight: 600;
   line-height: 146.4px;
   letter-spacing: -0.06em;
-  margin-left: 546px;
+  margin-left: 306px;
+  text-align: center;
 }
 .head1 {
   margin-left: 150px;
@@ -58,24 +59,149 @@
 .scrollButton:hover {
   background-color: lightgray;
 }
+@media screen and (max-width:1440px){
+  .scrollButton{
+    margin-top: 183px;
+  }
+  .warpHead{
+    background-size: 1824px 1119px;
+  }
+}
+@media screen and (max-width:1024px){
+  .scrollButton{
+    margin-top: 187px;
+  }
+  
+}
 
-@media screen and (max-width: 1440px) {
+
+@media screen and (max-width:768px) {
+  .warpHead {
+    height: 1319px;
+        /* border: 2px solid black; */
+        background-size: contain;
+  }
+  .head {
+    /* border: 2px solid red;  */
+        width: 1055px;
+        height: 670px;
+        margin-top: 116px;
+        font-family: "Poppins";
+        font-size: 170px;
+        font-weight: 500;
+        line-height: 173.44px;
+        letter-spacing: -0.06em;
+        text-align: center;
+        margin-left: 385px;
+  }
   .scrollButton {
-    margin-top: 315px;
+    /* border: 2px solid brown; */
+        margin-left: 44%;
+        margin-top: 0.5%;
+        font-size: 34.88px;
+        width: 238px;
+        height: 81px;
+        border-radius: 40px;
+  }
+  .img {
+    /* border: 2px solid violet; */
+    background-size: contain;
+    margin-top: 96px;
+    margin-left: 570px;
+    height: 157px;
+    width: 647px;
   }
 }
 
-@media screen and (max-width: 1024px) {
-}
-
-@media screen and (max-width: 768px) {
-}
-
 @media screen and (max-width: 425px) {
+  .warpHead {
+    height: 1955px;
+    /* border: 2px solid black; */
+    background-size: cover;
+    background-image: url("../../public/image/Frame\ 1.png");
+  }
+  .head {
+    /* border: 2px solid red; */
+    width: 1055px;
+    height: 824px;
+    margin-top: 264px;
+    font-family: "Poppins";
+    font-size: 212px;
+    font-weight: 500;
+    line-height: 217.44px;
+    letter-spacing: -0.06em;
+    text-align: center;
+    margin-left: 0px;
+
+  }
+  .small{
+    display: flex;
+    width: auto;
+    justify-content: center;
+  }
+  .scrollButton {
+    /* border: 2px solid brown; */
+    margin-left: 41%;
+    margin-top: 22.5%;
+    font-size: 44.88px;
+    width: 381px;
+    height: 98px;
+    border-radius: 40px;
+  }
+  .img {
+    /* border: 2px solid violet;  */
+    background-image: url("../../public/image/logo2.png");
+        background-size: contain;
+        margin-top: 230px;
+        margin-left: 0px;
+        height: px;
+        width: auto;
+        background-position: center;
+  }
 }
 
-@media screen and (max-width: 375px) {
-}
+@media screen and (max-width: 393px) {
+  .warpHead {
+    height: 1955px;
+    /* border: 2px solid black; */
+    background-size: cover;
+    background-image: url("../../public/image/Frame\ 1.png");
+  }
+  .head {
+    /* border: 2px solid red; */
+    width: 1055px;
+    height: 824px;
+    margin-top: 264px;
+    font-family: "Poppins";
+    font-size: 188px;
+    font-weight: 500;
+    line-height: 217.44px;
+    letter-spacing: -0.06em;
+    text-align: center;
 
-@media screen and (max-width: 320px) {
+  }
+  .small{
+    display: flex;
+    width: auto;
+    justify-content: center;
+  }
+  .scrollButton {
+    /* border: 2px solid brown; */
+    margin-left: 41%;
+    margin-top: 17.5%;
+    font-size: 44.88px;
+    width: 381px;
+    height: 98px;
+    border-radius: 40px;
+  }
+  .img {
+    /* border: 2px solid violet;  */
+    background-image: url("../../public/image/logo2.png");
+        background-size: contain;
+        margin-top: 230px;
+        margin-left: 0px;
+        height: px;
+        width: auto;
+        background-position: center;
+  }
 }

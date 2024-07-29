@@ -1,13 +1,14 @@
-.mobWebGap {
+mobWebGap {
   width: 85%;
   height: 89px;
   margin-left: 65px;
   border-radius: 30px 30px 30px 30px;
-  background-image: radial-gradient(rgb(238 247 207), #f5f9e6);
+  /* background-image: radial-gradient(rgb(238 247 207), #f5f9e6); */
 }
 .web {
   height: 120vh;
   background-image: linear-gradient(#f5f9e6 10%, white 20%);
+  /* border: 1px solid black; */
 }
 .webHead {
   width: 487px;
@@ -22,6 +23,8 @@
   letter-spacing: -0.05em;
   text-align: left;
   margin-bottom: 20px;
+  /* border: 1px solid rgb(228, 18, 18); */
+
 }
 .mobWebButton {
   width: 236px;
@@ -38,6 +41,8 @@
   font-weight: 400;
   line-height: 30px;
   text-align: left;
+  /* border: 1px solid rgb(211, 26, 50); */
+
 }
 .mobWebButton:hover,
 .mobWebButton.active {
@@ -52,6 +57,8 @@
   gap: 0px;
   border-radius: 30px 0px 0px 30px;
   opacity: 0px;
+  /* border: 1px solid rgb(25, 226, 102); */
+  display: block;
 }
 
 .webContainer {
@@ -61,28 +68,34 @@
   margin-right: 77px;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 30px 30px 30px 30px;
+  /* border: 1px solid black; */
+  display: flex;
+
 }
 .imageDisplay {
   padding: 20px;
-    margin-left: 305px;
-    margin-top: -900px;
     height: 858px;
-    width: 1400px;
+    width: 1390px;
+    /* border: 1px solid rgb(240, 35, 35); */
+
 
 }
 .imageContainer {
   position: relative;
-  height: 788px;
-  margin-left: 30px;
-  width: 1390px;
+  height: 785px;
+  width: 1429px;
+  /* border: 1px solid rgb(26, 31, 26); */
+  display: inline-flex;
+
 }
 
 .displayedImage {
   position: absolute;
     margin-top: 20px;
-    margin-left: 0px;
-    height: 769px;
+    margin-left: 30px;
+    height: 761px;
     width: 1340px;
+    /* border: 2px solid salmon; */
 }
 
 .description {
@@ -90,6 +103,8 @@
   height: 48px;
   margin-left: 30px;
   width: 1250px;
+    /* border: 1px solid rgb(30, 129, 211); */
+
 
 }
 .heading {
@@ -101,22 +116,316 @@
   margin-bottom: 10px;
   margin-left: 30px;
   width: 1250px;
+  /* border: 1px solid rgb(31, 190, 26); */
+
 }
 
-@media screen and (max-width: 1440px) {
+.dropdownContainer{
+  display: none;
 }
 
-@media screen and (max-width: 1024px) {
+.dropdown {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  width: 100%;
+  background-color: black; 
+  color: white; 
+  border: none;
+  display: none; 
+  z-index: 1; 
 }
 
+.dropdown.show {
+  display: block; 
+}
+
+.dropdown option {
+  background-color: black; 
+  color: white; 
+  font-size: 15px;
+  font-family: "Poppins";
+}
+
+.dropdown :hover{
+  background-color: #baef02;
+  color: black;
+}
+
+@media screen and (max-width: 1440px){
+  .webHead{
+    margin-top: 162px;
+  }
+  .web{
+    height: 140vh;
+  }
+}
+@media screen and (max-width:1024px){
+  .webHead{
+    margin-top: 176px;
+  }
+  .web{
+    height: 135vh;
+  }
+}
 @media screen and (max-width: 768px) {
+  .web {
+    /* border: 2px solid red; */
+    height: 216vh;
+  }
+  .webHead {
+    /* border: 2px solid black; */
+    width: 761px;
+    height: 107px;
+    font-size: 99px;
+    padding: 20px;
+    font-weight: 500;
+    margin-top: 231px;
+
+  }
+  
+  .webContainer{
+    /* border: 2px solid blue; */
+    width: 1736px;
+    display: flex;
+   height: 1412px;
+    margin-top: 40px;
+  }
+  .imageContainer{
+    /* border: 2px solid rgb(248, 30, 67); */
+    height: 1094px;
+    width: fit-content;
+
+  }
+  .mobWebButtonArea{
+    width: 349px;
+    height: 1412px;
+    /* border: 3px solid gold; */
+  }
+  .mobWebButton{
+    font-size: 34px;
+        height: 80px;
+        width: 275px;
+        border-radius: 70px;
+        padding: 20px;
+  }
+  
+  .imageDisplay{
+    padding: 20px;
+        margin-left: -15px;
+        margin-top: 35px;
+        height: 858px;
+        width: 1400px;
+  }
+  .heading{
+    /* border: 2px solid green;  */
+    font-size: 54px;
+    margin-top: -27px;
+    height: 61px;
+    padding-top: 23px;
+}
+  .description{
+    /* border: 1px solid royalblue; */
+        width: 99%;
+        height: 200px;
+        font-size: 39px;
+        font-weight: 400;
+  }
+  .displayedImage{
+    /* border: 2px solid brown; */
+    height: 1045px;
+    margin-top: 37px;
+  }
 }
 
 @media screen and (max-width: 425px) {
+  .web {
+    /* border: 2px solid red; */
+    height: 260vh;
+  }
+  .webHead {
+    /* border: 2px solid black; */
+    width: 761px;
+    height: 107px;
+    font-size: 99px;
+    padding: 20px;
+    font-weight: 500;
+    margin-top: 237px;
+
+  }
+  .mobWebButtonArea {
+    display: none;
+  }
+  .dropdown {
+    display: block;
+    /* border: 2px solid red; */
+    width: 96%;
+    border-radius: 188px;
+    text-align: center;
+    font-size: 70px;
+    height: 167px;
+    background-color: #baef02;
+    color: black;
+    margin-top: -62px;
+    margin-left: 25px;
+    border: none;
+    z-index: 1;
+  }
+  
+  .dropdownContainer {
+    position: relative; 
+    display: block; 
+    align-items: center; 
+  }
+  .dropdownButton {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px; /* Adjust font size to make sure arrows are visible */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .webContainer{
+    /* border: 2px solid blue; */
+    width: 1442px;
+    display: flex;
+    flex-direction: column;
+    height: 1733px;
+    margin-top: 47px;
+    margin-left: 60px;
+    margin: auto;
+  }
+  .imageContainer{
+    /* border: 2px solid rgb(248, 30, 67); */
+    height: 1070px;
+  }
+  
+  .imageDisplay{
+    padding: 20px;
+        margin-left: -15px;
+        margin-top: 35px;
+        height: 858px;
+        width: 1400px;
+  }
+  .heading{
+    /* border: 2px solid green;  */
+    font-size: 54px;
+    margin-top: 69px;
+    height: 61px;
+    padding-top: 23px;
+}
+  .description{
+    /* border: 1px solid royalblue; */
+        width: 96%;
+        height: auto;
+        font-size: 54px;
+        font-weight: 400;
+  }
+  .displayedImage{
+    /* border: 2px solid brown; */
+    height: 1015px;
+    margin-top: 74px;
+  }
 }
 
-@media screen and (max-width: 375px) {
-}
+@media screen and (max-width: 393px) {
+  .web {
+    /* border: 2px solid red; */
+    height: 313vh;
 
-@media screen and (max-width: 320px) {
+  }
+  .webHead {
+    /* border: 2px solid black; */
+    width: 761px;
+    height: 107px;
+    font-size: 99px;
+    padding: 20px;
+    font-weight: 500;
+  }
+  .mobWebButtonArea {
+    display: none;
+  }
+  .dropdown {
+    display: block;
+    /* border: 2px solid red; */
+    width: 96%;
+    border-radius: 188px;
+    text-align: center;
+    font-size: 70px;
+    height: 167px;
+    background-color: #baef02;
+    color: black;
+    margin-top: -62px;
+    margin-left: 25px;
+    border: none;
+    z-index: 1;
+  }
+  
+  .dropdownContainer {
+    position: relative; 
+    display: block; 
+    align-items: center; 
+  }
+  .dropdownButton {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px; /* Adjust font size to make sure arrows are visible */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .webContainer{
+    /* border: 2px solid blue; */
+    width: 1440px;
+    display: flex;
+    flex-direction: column;
+    height: 1661px;
+    margin-top: 80px;
+  }
+  .imageContainer{
+    /* border: 2px solid rgb(248, 30, 67); */
+    height: 1070px;
+  }
+  
+  .imageDisplay{
+    padding: 20px;
+        margin-left: -15px;
+        margin-top: 35px;
+        height: 858px;
+        width: 1400px;
+  }
+  .heading{
+    /* border: 2px solid green;  */
+    font-size: 54px;
+    margin-top: 69px;
+    height: 61px;
+    padding-top: 23px;
+}
+  .description{
+    /* border: 1px solid royalblue; */
+        width: 96%;
+        height: auto;
+        font-size: 54px;
+        font-weight: 400;
+  }
+  .displayedImage{
+    /* border: 2px solid brown; */
+    height: 1015px;
+    margin-top: 74px;
+  }
+}
+@media screen and (max-width:375px){
+  .webHead{
+    margin-top: 67px;
+    margin-left: 10px;
+  }
+  
+  .webContainer{
+    height: 1869px;
+    margin: auto;
+  }
 }

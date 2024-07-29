@@ -4,39 +4,35 @@
 }
 
 @media screen and (max-width:1440px){
-  .container{ 
-    width: 1900px;
+  .container{
+    width: 1827px;
   }
 }
 
 @media screen and (max-width:1024px) {
-  .container {
-    width: 1274px;
-
-  }
+  .container{
+    width: 1830px;
+  }  
 }
-
 @media screen and (max-width:768px) {
-  .container {
-    width: 1274px;
+  .container{
+    width: 1825px;
   }
 }
-
 @media screen and (max-width:425px) {
+  .container{
+    width: 1695px;
+  }
+}
+@media screen and (max-width:393px) {
   .container {
-    width: 1180px;
+    width: 1568px;
   }
 }
 
-@media screen and (max-width:375px) {
-  .container {
-    width: 1040px;
-  }
-}
-
-@media screen and (max-width:320px) {
-  .container {
-    width: 880px;
+@media screen and (max-width: 375px) {
+  .container{
+    width: 1496px;
   }
 }
 
