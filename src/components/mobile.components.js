@@ -6,6 +6,7 @@ const Mobile = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const containerRef = useRef(null);
   const dropdownRef = useRef(null);
+  const mobileRef = useRef(null);
 
   const images = {
     Puntsquad: {
@@ -207,6 +208,27 @@ const Mobile = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(style.animate);
+          } else {
+            entry.target.classList.remove(style.animate);
+          }
+        });
+      },
+      { threshold: 0.1 } // Adjust threshold as needed
+    );
+
+    if (mobileRef.current) {
+      observer.observe(mobileRef.current);
+    }
+
+  
+  }, []);
+
   const handleButtonClick = (buttonName) => {
     setSelectedButton(buttonName);
     setDropdownOpen(false);
@@ -226,7 +248,7 @@ const Mobile = () => {
   };
 
   return (
-    <div className={style.mobile}>
+    <div className={`${style.mobile} ${style.animate}`} ref={mobileRef}>
       <div className={style.mobHeadBack}>
         <div className={style.moblieHead}>Mobile Designs</div>
       </div>

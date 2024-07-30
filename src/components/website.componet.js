@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef , useEffect } from "react";
 import style from "../css/website.module.css";
 
 const imageData = {
@@ -91,6 +91,7 @@ const imageData = {
 const Website = () => {
   const [selectedButton, setSelectedButton] = useState(Object.keys(imageData)[0]);
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const webRef = useRef(null);
 
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
@@ -100,12 +101,34 @@ const Website = () => {
     setSelectedButton(e.target.value);
     setDropdownVisible(false); // Hide dropdown after selection
   };
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(style.animate);
+          } else {
+            entry.target.classList.remove(style.animate);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
 
+    if (webRef.current) {
+      observer.observe(webRef.current);
+    }
+
+
+    
+  }, []);
 
   return (
     <>
-      <div className={style.mobWebGap}></div>
-      <div className={style.web}>
+      
+      <div className={`${style.web}`} ref={webRef}>
         <div className={style.webHead}>Website Designs</div>
         <div className={style.webContainer}>
           <div className={style.mobWebButtonArea}>

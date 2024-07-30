@@ -1,14 +1,30 @@
-mobWebGap {
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.mobWebGap {
   width: 85%;
   height: 89px;
   margin-left: 65px;
   border-radius: 30px 30px 30px 30px;
-  /* background-image: radial-gradient(rgb(238 247 207), #f5f9e6); */
+}
+.warpDiv2{
+  display: none;
 }
 .web {
   height: 120vh;
   background-image: linear-gradient(#f5f9e6 10%, white 20%);
   /* border: 1px solid black; */
+  transition: tranformation 1s;
+}
+.web.animate{
+  animation: fadeIn 2s forwards;
 }
 .webHead {
   width: 487px;
@@ -41,6 +57,7 @@ mobWebGap {
   font-weight: 400;
   line-height: 30px;
   text-align: left;
+  padding-left: 20px;
   /* border: 1px solid rgb(211, 26, 50); */
 
 }

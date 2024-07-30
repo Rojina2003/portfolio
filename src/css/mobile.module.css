@@ -1,3 +1,19 @@
+.animate {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 .mobile {
   height: 100vh;
   background-image: linear-gradient(to top, #f5f9e6 10%, white 20%);
@@ -44,6 +60,7 @@
   font-size: 20px;
   font-weight: 400;
   line-height: 30px;
+  padding-left: 20px;
 }
 
 .mobWebButton:hover,
@@ -138,6 +155,7 @@
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .dropdownContent button {
